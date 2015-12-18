@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A8CE3DA1C24234300CF3E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8CE3D91C24234300CF3E47 /* AppDelegate.swift */; };
-		6A8CE3DC1C24234300CF3E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8CE3DB1C24234300CF3E47 /* ViewController.swift */; };
-		6A8CE3DF1C24234300CF3E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8CE3DD1C24234300CF3E47 /* Main.storyboard */; };
-		6A8CE3E11C24234300CF3E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8CE3E01C24234300CF3E47 /* Assets.xcassets */; };
-		6A8CE3E41C24234300CF3E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8CE3E21C24234300CF3E47 /* LaunchScreen.storyboard */; };
 		6A8CE3EF1C24234300CF3E47 /* PushwooshZPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8CE3EE1C24234300CF3E47 /* PushwooshZPTests.swift */; };
 		6A8CE3FA1C24234300CF3E47 /* PushwooshZPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8CE3F91C24234300CF3E47 /* PushwooshZPUITests.swift */; };
+		6A8CE40F1C24241000CF3E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8CE4081C24241000CF3E47 /* AppDelegate.swift */; };
+		6A8CE4101C24241000CF3E47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8CE4091C24241000CF3E47 /* Assets.xcassets */; };
+		6A8CE4111C24241000CF3E47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8CE40A1C24241000CF3E47 /* LaunchScreen.storyboard */; };
+		6A8CE4121C24241000CF3E47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8CE40C1C24241000CF3E47 /* Main.storyboard */; };
+		6A8CE4131C24241000CF3E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8CE40E1C24241000CF3E47 /* ViewController.swift */; };
+		6A8CE4151C24242400CF3E47 /* PushwooshZP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8CE4141C24242400CF3E47 /* PushwooshZP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +36,6 @@
 
 /* Begin PBXFileReference section */
 		6A8CE3D61C24234300CF3E47 /* PushwooshZP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushwooshZP.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A8CE3D91C24234300CF3E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A8CE3DB1C24234300CF3E47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6A8CE3DE1C24234300CF3E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6A8CE3E01C24234300CF3E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6A8CE3E31C24234300CF3E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A8CE3E51C24234300CF3E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A8CE3EA1C24234300CF3E47 /* PushwooshZPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushwooshZPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8CE3EE1C24234300CF3E47 /* PushwooshZPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushwooshZPTests.swift; sourceTree = "<group>"; };
@@ -47,6 +43,12 @@
 		6A8CE3F51C24234300CF3E47 /* PushwooshZPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushwooshZPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8CE3F91C24234300CF3E47 /* PushwooshZPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushwooshZPUITests.swift; sourceTree = "<group>"; };
 		6A8CE3FB1C24234300CF3E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8CE4081C24241000CF3E47 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A8CE4091C24241000CF3E47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A8CE40B1C24241000CF3E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A8CE40D1C24241000CF3E47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A8CE40E1C24241000CF3E47 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A8CE4141C24242400CF3E47 /* PushwooshZP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushwooshZP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		6A8CE3CD1C24234300CF3E47 = {
 			isa = PBXGroup;
 			children = (
+				6A8CE4071C24241000CF3E47 /* Example */,
 				6A8CE3D81C24234300CF3E47 /* PushwooshZP */,
 				6A8CE3ED1C24234300CF3E47 /* PushwooshZPTests */,
 				6A8CE3F81C24234300CF3E47 /* PushwooshZPUITests */,
@@ -97,12 +100,8 @@
 		6A8CE3D81C24234300CF3E47 /* PushwooshZP */ = {
 			isa = PBXGroup;
 			children = (
-				6A8CE3D91C24234300CF3E47 /* AppDelegate.swift */,
-				6A8CE3DB1C24234300CF3E47 /* ViewController.swift */,
-				6A8CE3DD1C24234300CF3E47 /* Main.storyboard */,
-				6A8CE3E01C24234300CF3E47 /* Assets.xcassets */,
-				6A8CE3E21C24234300CF3E47 /* LaunchScreen.storyboard */,
 				6A8CE3E51C24234300CF3E47 /* Info.plist */,
+				6A8CE4141C24242400CF3E47 /* PushwooshZP.swift */,
 			);
 			path = PushwooshZP;
 			sourceTree = "<group>";
@@ -123,6 +122,18 @@
 				6A8CE3FB1C24234300CF3E47 /* Info.plist */,
 			);
 			path = PushwooshZPUITests;
+			sourceTree = "<group>";
+		};
+		6A8CE4071C24241000CF3E47 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				6A8CE4081C24241000CF3E47 /* AppDelegate.swift */,
+				6A8CE4091C24241000CF3E47 /* Assets.xcassets */,
+				6A8CE40A1C24241000CF3E47 /* LaunchScreen.storyboard */,
+				6A8CE40C1C24241000CF3E47 /* Main.storyboard */,
+				6A8CE40E1C24241000CF3E47 /* ViewController.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +240,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A8CE3E41C24234300CF3E47 /* LaunchScreen.storyboard in Resources */,
-				6A8CE3E11C24234300CF3E47 /* Assets.xcassets in Resources */,
-				6A8CE3DF1C24234300CF3E47 /* Main.storyboard in Resources */,
+				6A8CE4121C24241000CF3E47 /* Main.storyboard in Resources */,
+				6A8CE4101C24241000CF3E47 /* Assets.xcassets in Resources */,
+				6A8CE4111C24241000CF3E47 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A8CE3DC1C24234300CF3E47 /* ViewController.swift in Sources */,
-				6A8CE3DA1C24234300CF3E47 /* AppDelegate.swift in Sources */,
+				6A8CE4131C24241000CF3E47 /* ViewController.swift in Sources */,
+				6A8CE40F1C24241000CF3E47 /* AppDelegate.swift in Sources */,
+				6A8CE4151C24242400CF3E47 /* PushwooshZP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,20 +305,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6A8CE3DD1C24234300CF3E47 /* Main.storyboard */ = {
+		6A8CE40A1C24241000CF3E47 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6A8CE3DE1C24234300CF3E47 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6A8CE3E21C24234300CF3E47 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6A8CE3E31C24234300CF3E47 /* Base */,
+				6A8CE40B1C24241000CF3E47 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6A8CE40C1C24241000CF3E47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A8CE40D1C24241000CF3E47 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
