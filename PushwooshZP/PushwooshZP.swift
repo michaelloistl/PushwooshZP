@@ -121,74 +121,74 @@ public class PushwooshZP {
     
     // MARK: Subscribe
     
-    class func subscribeToChannel(channel: String, completion: Completion) {
-        if let deviceToken = sharedInstance.deviceToken {
-            let path = "subscribe"
-            let parameters = ["device_token": deviceToken, "channel": channel]
-            
-            requestWithMethod(.POST, path: path, parameters: parameters) { (success, request, response, responseObject, error) -> Void in
-                
-                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
-            }
-        } else {
-            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
-        }
-    }
-    
-    class func unsubscribeFromChannel(channel: String, completion: Completion) {
-        if let deviceToken = sharedInstance.deviceToken {
-            let path = "subscribe"
-            let parameters = ["device_token": deviceToken, "channel": channel]
-            
-            requestWithMethod(.DELETE, path: path, parameters: parameters) { (success, request, response, responseObject, error) -> Void in
-                
-                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
-            }
-        } else {
-            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
-        }
-    }
-    
-    class func unsubscribeFromAllChannels(completion: Completion) {
-        if let deviceToken = sharedInstance.deviceToken {
-            let path = "devices/\(deviceToken)"
-            let parameters = ["channel_list": ""]
-            
-            requestWithMethod(.PUT, path: path, parameters: parameters) { (success, request, response, responseObject, error) -> Void in
-                
-                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
-            }
-        } else {
-            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
-        }
-    }
-    
-    class func getDevice(completion: Completion) {
-        if let deviceToken = sharedInstance.deviceToken {
-            let path = "devices/\(deviceToken)"
-            
-            requestWithMethod(.GET, path: path, parameters: nil) { (success, request, response, responseObject, error) -> Void in
-                
-                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
-            }
-        } else {
-            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
-        }
-    }
-    
-    class func setChannels(channels: [String], completion: Completion) {
-        if let deviceToken = sharedInstance.deviceToken {
-            let path = "devices/\(deviceToken)"
-            let parameters = ["channel_list": channels.joinWithSeparator(",")]
-            
-            requestWithMethod(.PUT, path: path, parameters: parameters) { (success, request, response, responseObject, error) -> Void in
-                
-                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
-            }
-        } else {
-            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
-        }
-    }
+//    class func subscribeToChannel(channel: String, completion: Completion) {
+//        if let deviceToken = sharedInstance.deviceToken {
+//            let path = "subscribe"
+//            let parameters = ["device_token": deviceToken, "channel": channel]
+//            
+//            requestWithMethod(.POST, path: path, parameters: parameters) { (success, request, response, responseObject, error) -> Void in
+//                
+//                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
+//            }
+//        } else {
+//            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
+//        }
+//    }
+//    
+//    class func unsubscribeFromChannel(channel: String, completion: Completion) {
+//        if let deviceToken = sharedInstance.deviceToken {
+//            let path = "subscribe"
+//            let parameters = ["device_token": deviceToken, "channel": channel]
+//            
+//            requestWithMethod(.DELETE, path: path, parameters: parameters) { (success, request, response, responseObject, error) -> Void in
+//                
+//                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
+//            }
+//        } else {
+//            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
+//        }
+//    }
+//    
+//    class func unsubscribeFromAllChannels(completion: Completion) {
+//        if let deviceToken = sharedInstance.deviceToken {
+//            let path = "devices/\(deviceToken)"
+//            let parameters = ["channel_list": ""]
+//            
+//            requestWithMethod(.PUT, path: path, parameters: parameters) { (success, request, response, responseObject, error) -> Void in
+//                
+//                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
+//            }
+//        } else {
+//            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
+//        }
+//    }
+//    
+//    class func getDevice(completion: Completion) {
+//        if let deviceToken = sharedInstance.deviceToken {
+//            let path = "devices/\(deviceToken)"
+//            
+//            requestWithMethod(.GET, path: path, parameters: nil) { (success, request, response, responseObject, error) -> Void in
+//                
+//                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
+//            }
+//        } else {
+//            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
+//        }
+//    }
+//    
+//    class func setChannels(channels: [String], completion: Completion) {
+//        if let deviceToken = sharedInstance.deviceToken {
+//            let path = "devices/\(deviceToken)"
+//            let parameters = ["channel_list": channels.joinWithSeparator(",")]
+//            
+//            requestWithMethod(.PUT, path: path, parameters: parameters) { (success, request, response, responseObject, error) -> Void in
+//                
+//                completion(success: success, request: request, response: response, responseObject: responseObject, error: error)
+//            }
+//        } else {
+//            completion(success: false, request: nil, response: nil, responseObject: nil, error: nil)
+//        }
+//    }
     
     // MARK: Networking
     
