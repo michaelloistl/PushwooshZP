@@ -9,22 +9,22 @@
 import Foundation
 import Alamofire
 
-protocol ZeroPushPWDelegate {
+public protocol PushwooshZPDelegate {
     
 }
 
-class PushwooshZP {
+public class PushwooshZP {
     
     static let APIURLHost = "https://zeropush.pushwoosh.com/"
     static let ClientVersion = "ZeroPush-iOS/2.1.0"
     
-    typealias Completion = (success: Bool, request: NSURLRequest?, response: NSHTTPURLResponse?, responseObject: AnyObject?, error: NSError?) -> Void
+    public typealias Completion = (success: Bool, request: NSURLRequest?, response: NSHTTPURLResponse?, responseObject: AnyObject?, error: NSError?) -> Void
     
     var apiKey: String?
-    var delegate: ZeroPushPWDelegate?
+    var delegate: PushwooshZPDelegate?
     var deviceToken: String?
     
-    class var sharedInstance: PushwooshZP {
+    public class var sharedInstance: PushwooshZP {
         struct Singleton {
             static let instance = PushwooshZP()
         }
@@ -34,16 +34,16 @@ class PushwooshZP {
     
     // MARK: - Methods
     
-    class func engageWithAPIKey(apiKey: String) {
+    public class func engageWithAPIKey(apiKey: String) {
         engageWithAPIKey(apiKey, delegate: nil)
     }
     
-    class func engageWithAPIKey(apiKey: String, delegate: ZeroPushPWDelegate?) {
+    public class func engageWithAPIKey(apiKey: String, delegate: PushwooshZPDelegate?) {
         sharedInstance.apiKey = apiKey
         sharedInstance.delegate = delegate
     }
     
-    class func deviceTokenFromData(tokenData: NSData) -> String {
+    public class func deviceTokenFromData(tokenData: NSData) -> String {
         var token = tokenData.description
         token = token.stringByReplacingOccurrencesOfString("<", withString: "")
         token = token.stringByReplacingOccurrencesOfString(">", withString: "")
@@ -53,19 +53,25 @@ class PushwooshZP {
     
     // MARK: Register
     
-    class func registerForRemoteNotifications() {
+    public class func registerForRemoteNotifications() {
         let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
         UIApplication.sharedApplication().registerForRemoteNotifications()
     }
     
-    class func registerDeviceToken(deviceToken: NSData) {
+    public class func registerDeviceToken(deviceToken: NSData) {
         registerDeviceToken(deviceToken, channel: nil) { (success, request, response, responseObject, error) -> Void in
             
         }
     }
+
+    public class func registerDeviceToken(deviceToken: NSData?, channel: String?) {
+        registerDeviceToken(deviceToken, channel: channel) { (success, request, response, responseObject, error) -> Void in
+            
+        }
+    }
     
-    class func registerDeviceToken(deviceToken: NSData?, channel: String?, completion: Completion) {
+    public class func registerDeviceToken(deviceToken: NSData?, channel: String?, completion: Completion) {
         if let deviceToken = deviceToken {
             sharedInstance.deviceToken = deviceTokenFromData(deviceToken)
         }
@@ -87,7 +93,13 @@ class PushwooshZP {
         }
     }
     
-    class func unregisterDeviceToken(completion: Completion) {
+    public class func unregisterDeviceToken() {
+        unregisterDeviceToken { (success, request, response, responseObject, error) -> Void in
+            
+        }
+    }
+    
+    public class func unregisterDeviceToken(completion: Completion) {
         if let deviceToken = sharedInstance.deviceToken {
             let path = "unregister"
             let parameters = ["device_token": deviceToken]
@@ -184,14 +196,10 @@ class PushwooshZP {
         
         if let apiKey = sharedInstance.apiKey {
             let urlString = "\(APIURLHost)\(path)"
-            let headers = ["Authorization": "Token token=\"\(apiKey)\""]
+            let headers = ["Authorization": "Token token=\"\(apiKey)\"", "X-API-Client-Agent": ClientVersion]
             
             Alamofire.request(method, urlString, parameters: parameters, headers: headers).responseJSON { response in
                 let isSuccess = response.response?.statusCode >= 200 && response.response?.statusCode < 300
-                
-                //                let message = "PATH: \(path) CODE: \(response.response?.statusCode) RESPONSE: \(response.result.value) ERROR: \(response.result.error) HEADERS: \(headers)"
-                //
-                //                UIAlertView(title: "PW REQUEST", message: message, delegate: nil, cancelButtonTitle: "OK").show()
                 
                 completion(success: isSuccess, request: response.request, response: response.response, responseObject: response.result.value, error: response.result.error)
             }
