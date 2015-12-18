@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.authors = { 'Michael Loistl' => 'michael@aplo.co' }
     s.source = { :git => 'https://github.com/michaelloistl/PushwooshZP.git', :tag => s.version }
 
-    s.ios.deployment_target = '7.0'
+    s.ios.deployment_target = '8.0'
     s.osx.deployment_target = '10.9'
     s.watchos.deployment_target = '2.0'
 
